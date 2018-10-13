@@ -1,0 +1,35 @@
+{
+  "name": "goat-plugin-template-es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint src --ext .js --fix",
+    "debug": "node bin/start.js",
+    "build": "npm run clean && babel src --out-dir lib",
+    "clean": "rimraf lib",
+    "test": "mocha --require intelli-espower-loader 'test/**/*.test.js'",
+    "prepublishOnly": "npm run build && rimraf src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.11.7",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.6.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^5.2.0",
+    "power-assert": "^1.6.1",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {}
+}
